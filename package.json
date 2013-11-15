@@ -1,0 +1,26 @@
+{
+  "name": "tradeking-sdk",
+  "version": "0.0.0",
+  "description": "An SDK utility/wrapper for the TradeKing RESTFul API",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cflynn07/tradeking-sdk"
+  },
+  "keywords": [
+    "tradeking",
+    "broker",
+    "brokerage",
+    "stocks",
+    "api",
+    "sdk"
+  ],
+  "author": "Casey Flynn",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/cflynn07/tradeking-sdk/issues"
+  }
+}
