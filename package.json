@@ -22,5 +22,11 @@
   "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/cflynn07/tradeking-sdk/issues"
+  },
+  "dependencies": {
+    "oauth": "0.9.x"
+  },
+  "devDependencies": {
+    "coffee-script": "1.6.x"
   }
 }
