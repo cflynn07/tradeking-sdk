@@ -11,11 +11,11 @@ docs:
 clean-docs:
 	rm -rf docs/
 
-clean: clean-docs
-  rm -rf lib/ test/*.js
+#clean: clean-docs:
+#  rm -rf lib/ test/*.js
 
 build:
-	coffee -o lib/ -c src/ && coffee -c test/refix.coffee
+	coffee -o lib/ -c src/lib/ && coffee -o bin/ -c src/bin
 
 test:
 	nodeunit test/refix.js
