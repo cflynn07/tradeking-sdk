@@ -1,8 +1,27 @@
-# TradeKing JS SDK
+TradeKing JS SDK
+================
 
-## Preface
+A module for interfacing with the TradeKing API via command line and within a nodejs project
 
-## Documentation
+Preface
+-------
 
-## Contributors
-[cflynn07](https://github.com/cflynn07)
+Setup
+-----
+- To use the command-line utility:
+  `sudo npm install tradeking-sdk -g'
+- To use within a project:
+  `npm install tradeking-sdk`
+
+Documentation
+-------------
+- [USAGE](USAGE.md)
+- [CONTRIBUTING](CONTRIBUTING.md)
+
+Requirements
+------------
+
+Credits
+-------
+Contributors: [cflynn07](https://github.com/cflynn07)
+Boston, MA, United States
