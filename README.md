@@ -1,3 +1,6 @@
+# Work In Progress
+## Not yet ready for release
+
 TradeKing JS SDK
 ================
 
