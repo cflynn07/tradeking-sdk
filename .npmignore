@@ -2,5 +2,7 @@
 .log
 .dump
 
+privateConfig.*
+
 spec/
 src/
