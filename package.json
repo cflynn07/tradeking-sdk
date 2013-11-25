@@ -24,7 +24,8 @@
     "url": "https://github.com/cflynn07/tradeking-sdk/issues"
   },
   "dependencies": {
-    "oauth": "0.9.x"
+    "oauth": "~0.9.10",
+    "q": "~0.9.7"
   },
   "devDependencies": {
     "coffee-script": "1.6.x"
