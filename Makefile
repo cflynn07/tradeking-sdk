@@ -15,7 +15,10 @@ clean-docs:
 #  rm -rf lib/ test/*.js
 
 build:
-	coffee -o lib/ -c src/lib/ && coffee -o bin/ -c src/bin
+	coffee -o ./ -c src/
+
+build-watch:
+	coffee -w -o ./ -c src/
 
 test:
 	nodeunit test/refix.js
