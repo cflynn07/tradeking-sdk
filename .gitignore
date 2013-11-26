@@ -6,3 +6,4 @@ privateConfig.*
 
 node_modules/
 lib/
+bin/
