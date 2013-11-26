@@ -48,6 +48,7 @@ TradeKing = (consumerKey    = privateConfig.consumerKey
           else
             deferred.resolve err, data, response
 
+    #return
     deferred.promise
 
   ###*
@@ -56,6 +57,7 @@ TradeKing = (consumerKey    = privateConfig.consumerKey
   this.getAccounts = (callback) ->
     apiRequest 'get', 'accounts', callback
 
+  #return
   this
 
 module.exports = TradeKing
