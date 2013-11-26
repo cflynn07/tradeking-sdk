@@ -6,8 +6,10 @@ client = new TradeKing()
 #  console.log data
 
 client.getAccounts () ->
+  console.log 'getAccounts'
+  console.log JSON.parse arguments[1]
   console.log arguments[1]
-  console.log 'callback complete'
 
-client.getAccounts().then () ->
-  console.log 'deferred complete'
+client.getAccountsBalances().then () ->
+  console.log 'getAccountsBalances'
+  console.log arguments

@@ -44,9 +44,11 @@ TradeKing = (consumerKey    = privateConfig.consumerKey
           callback(err, data, response)
         else
           if err
-            deferred.reject err, data, response
+            deferred.reject err
           else
-            deferred.resolve err, data, response
+            deferred.resolve
+             "data":     data
+             "response": response
 
     #return
     deferred.promise
@@ -56,6 +58,8 @@ TradeKing = (consumerKey    = privateConfig.consumerKey
   ###
   this.getAccounts = (callback) ->
     apiRequest 'get', 'accounts', callback
+  this.getAccountsBalances = (callback) ->
+    apiRequest 'get', 'accounts/balances', callback
 
   #return
   this
