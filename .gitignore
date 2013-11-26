@@ -5,5 +5,5 @@
 privateConfig.*
 
 node_modules/
-bin/
-lib/
+/bin/
+/lib/
