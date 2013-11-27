@@ -17,7 +17,7 @@ TradeKing = (consumerKey    = privateConfig.consumerKey
              accessSecret   = privateConfig.accessSecret) ->
 
   ###*
-   * Private Vars
+   * Private Variables && Methods
   ###
   tradeKingUser = new oauth.OAuth(
     'https://developers.tradeking.com/oauth/request_token'
@@ -28,14 +28,9 @@ TradeKing = (consumerKey    = privateConfig.consumerKey
     'http://example.com/tradeking/callback'
     'HMAC-SHA1'
   )
-
-  ###*
-   * Private Methods
-  ###
   apiRequest = (method, resource, callback = null) ->
 
     deferred = q.defer()
-
     tradeKingUser.get config.api_endpoint + resource + '.' + config.response_format,
       accessToken,
       accessSecret,
@@ -49,8 +44,6 @@ TradeKing = (consumerKey    = privateConfig.consumerKey
             deferred.resolve
              "data":     data
              "response": response
-
-    #return
     deferred.promise
 
   ###*
