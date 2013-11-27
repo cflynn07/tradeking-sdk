@@ -16,9 +16,6 @@ TradeKing = (consumerKey    = privateConfig.consumerKey
              accessToken    = privateConfig.accessToken,
              accessSecret   = privateConfig.accessSecret) ->
 
-  ###*
-   * Private Variables && Methods
-  ###
   tradeKingUser = new oauth.OAuth(
     'https://developers.tradeking.com/oauth/request_token'
     'https://developers.tradeking.com/oauth/access_token'
@@ -28,8 +25,13 @@ TradeKing = (consumerKey    = privateConfig.consumerKey
     'http://example.com/tradeking/callback'
     'HMAC-SHA1'
   )
-  apiRequest = (method, resource, callback = null) ->
 
+  ###*
+   * Perform an API request via oauth object and
+   * return result asyncronously via callback, or
+   * if no callback is specified via promise
+  ###
+  apiRequest = (method, resource, callback = null) ->
     deferred = q.defer()
     tradeKingUser.get config.api_endpoint + resource + '.' + config.response_format,
       accessToken,
@@ -46,13 +48,12 @@ TradeKing = (consumerKey    = privateConfig.consumerKey
              "response": response
     deferred.promise
 
-  ###*
-   * Privileged methods
   ###
   this.getAccounts = (callback) ->
     apiRequest 'get', 'accounts', callback
   this.getAccountsBalances = (callback) ->
     apiRequest 'get', 'accounts/balances', callback
+  ###
 
   #return
   this

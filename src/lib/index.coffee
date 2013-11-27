@@ -2,6 +2,7 @@ GLOBAL.root = __dirname + '/'
 GLOBAL.require = (m) ->
   require GLOBAL.root + m
 
+TradeKing = GLOBAL.require 'classes/tradeKing'
 Account   = GLOBAL.require 'models/account'
 Market    = GLOBAL.require 'models/market'
 Member    = GLOBAL.require 'models/member'

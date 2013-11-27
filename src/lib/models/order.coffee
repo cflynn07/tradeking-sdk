@@ -1,1 +1,1 @@
-Model = GLOBAL.require 'classes/model'
+TradeKing = GLOBAL.require 'classes/tradeKing'
