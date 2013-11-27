@@ -2,11 +2,13 @@ GLOBAL.root = __dirname + '/'
 GLOBAL.require = (m) ->
   require GLOBAL.root + m
 
-TradeKing = GLOBAL.require 'classes/tradeKing'
-Account   = GLOBAL.require 'models/account'
-Market    = GLOBAL.require 'models/market'
-Member    = GLOBAL.require 'models/member'
-Order     = GLOBAL.require 'models/order'
-Stream    = GLOBAL.require 'models/stream'
-Utility   = GLOBAL.require 'models/utility'
-Watchlist = GLOBAL.require 'models/watchlist'
+# Prototypically extending TradeKing class
+GLOBAL.require('models/account')
+GLOBAL.require('models/market')
+GLOBAL.require('models/member')
+GLOBAL.require('models/order')
+GLOBAL.require('models/stream')
+GLOBAL.require('models/utility')
+GLOBAL.require('models/watchlist')
+
+module.exports = GLOBAL.require 'classes/tradeKing'
