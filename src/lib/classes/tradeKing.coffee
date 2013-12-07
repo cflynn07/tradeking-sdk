@@ -57,6 +57,7 @@ TradeKing = (consumerKey    = config.consumerKey
 module.exports = TradeKing
 
 # Prototypically extending TradeKing class
+# Wrappers for TradeKing API resouces
 GLOBAL.require('models/account')
 GLOBAL.require('models/market')
 GLOBAL.require('models/member')
