@@ -58,11 +58,10 @@ module.exports = TradeKing
 
 # Prototypically extending TradeKing class
 # Wrappers for TradeKing API resouces
-GLOBAL.require('models/account')
-GLOBAL.require('models/market')
-GLOBAL.require('models/member')
-GLOBAL.require('models/order')
-GLOBAL.require('models/stream')
-GLOBAL.require('models/utility')
-GLOBAL.require('models/watchlist')
-
+GLOBAL.require 'models/account'
+GLOBAL.require 'models/market'
+GLOBAL.require 'models/member'
+GLOBAL.require 'models/order'
+GLOBAL.require 'models/stream'
+GLOBAL.require 'models/utility'
+GLOBAL.require 'models/watchlist'

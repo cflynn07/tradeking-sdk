@@ -1,26 +1,26 @@
-TK = GLOBAL.require 'classes/TradeKing'
+TradeKing = GLOBAL.require 'classes/tradeKing'
 
 ###*
  *
 ###
-TK.prototype.accounts = () ->
+TradeKing.prototype.accounts = (callback = null) ->
   if arguments.length is 1
-    this.apiRequest 'get', 'accounts', arguments[0]
-  else if arguments.length is 2
-    this.apiRequest 'get', 'accounts/' + arguments[0], arguments[1]
+    this.apiRequest 'get', 'accounts', callback
   else
     throw new Error 'getAccounts invalid arguments'
 
+return
+
 ###*
  *
 ###
-TK.prototype.accountsBalances = () ->
+TradeKing.prototype.accountsBalances = (callback = null) ->
   this.apiRequest 'get', 'accounts/balances', callback
 
 ###*
  *
 ###
-TK.prototype.accountsId = (id) ->
+TradeKing.prototype.accountsId = (id, callback) ->
   if (typeof id is not 'string') or (typeof id is not 'number')
     throw new Error 'accountsId invalid arguments'
   else
@@ -29,7 +29,7 @@ TK.prototype.accountsId = (id) ->
 ###*
  *
 ###
-TK.prototype.accountsIdBalances = (id) ->
+TradeKing.prototype.accountsIdBalances = (id, callback) ->
   if (typeof id is not 'string') or (typeof id is not 'number')
     throw new Error 'accountsIdBalances invalid arguments'
   else
@@ -38,7 +38,7 @@ TK.prototype.accountsIdBalances = (id) ->
 ###*
  *
 ###
-TK.prototype.accountsIdHistory = (id) ->
+TradeKing.prototype.accountsIdHistory = (id, callback) ->
   if (typeof id is not 'string') or (typeof id is not 'number')
     throw new Error 'accountsIdHistory invalid arguments'
   else
@@ -47,7 +47,7 @@ TK.prototype.accountsIdHistory = (id) ->
 ###*
  *
 ###
-TK.prototype.accountsIdHoldings = (id) ->
+TradeKing.prototype.accountsIdHoldings = (id, callback) ->
   if (typeof id is not 'string') or (typeof id is not 'number')
     throw new Error 'accountsIdHoldings invalid arguments'
   else
