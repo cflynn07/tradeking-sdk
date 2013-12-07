@@ -15,5 +15,4 @@ TradeKing.prototype.getAccounts = () ->
  *
 ###
 TradeKing.prototype.getAccountsBalances = () ->
-  
   this.apiRequest 'get', 'accounts/balances', callback

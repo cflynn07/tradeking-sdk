@@ -1,20 +1,20 @@
-oauth         = require 'oauth'
-q             = require 'q'
-privateConfig = GLOBAL.require 'config/privateConfig'
-config        = GLOBAL.require 'config/'
+oauth  = require 'oauth'
+q      = require 'q'
+config = GLOBAL.require 'config/'
 
 ###*
  * TradeKing SDK Class
+ *
  * @param {string} TradeKing consumer key
  * @param {string} TradeKing consumer secret key
  * @param {string} TradeKing consumer key
  * @param {string} TradeKing consumer key
  * @return {object}
 ###
-TradeKing = (consumerKey    = privateConfig.consumerKey
-             consumerSecret = privateConfig.consumerSecret,
-             accessToken    = privateConfig.accessToken,
-             accessSecret   = privateConfig.accessSecret) ->
+TradeKing = (consumerKey    = config.consumerKey
+             consumerSecret = config.consumerSecret
+             accessToken    = config.accessToken
+             accessSecret   = config.accessSecret) ->
 
   tradeKingUser = new oauth.OAuth(
     'https://developers.tradeking.com/oauth/request_token'
@@ -36,7 +36,7 @@ TradeKing = (consumerKey    = privateConfig.consumerKey
       throw new Error 'invalid callback'
     else
       deferred = q.defer()
-      tradeKingUser.get config.api_endpoint + resource + '.' + config.response_format,
+      tradeKingUser.get config.apiEndpoint + resource + '.' + config.responseFormat,
         accessToken,
         accessSecret,
         (err, data, response) ->
@@ -64,3 +64,4 @@ GLOBAL.require('models/order')
 GLOBAL.require('models/stream')
 GLOBAL.require('models/utility')
 GLOBAL.require('models/watchlist')
+
