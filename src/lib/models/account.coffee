@@ -3,18 +3,13 @@ TradeKing = GLOBAL.require 'classes/tradeKing'
 ###*
  *
 ###
-TradeKing.prototype.accounts = (callback = null) ->
-  if arguments.length is 1
+TradeKing.prototype.accounts = (callback) ->
     this.apiRequest 'get', 'accounts', callback
-  else
-    throw new Error 'getAccounts invalid arguments'
-
-return
 
 ###*
  *
 ###
-TradeKing.prototype.accountsBalances = (callback = null) ->
+TradeKing.prototype.accountsBalances = (callback) ->
   this.apiRequest 'get', 'accounts/balances', callback
 
 ###*
