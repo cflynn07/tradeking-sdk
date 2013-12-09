@@ -1,6 +1,6 @@
 {
   "name": "tradeking-sdk",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "An SDK utility/wrapper for the TradeKing RESTFul API",
   "bin": {
     "tradeking": "bin/wrapper.js"
