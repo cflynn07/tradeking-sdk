@@ -21,7 +21,10 @@
     "api",
     "sdk"
   ],
-  "author": "Casey Flynn",
+  "author": {
+    "name": "Casey Flynn",
+    "email": "cflynn.us@gmail.com"
+  },
   "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/cflynn07/tradeking-sdk/issues"
